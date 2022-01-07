@@ -1,6 +1,15 @@
-# maze
-Simple maze!
+## Vanilla Project JavaScript
 
-Made with VSC and thanks for JotraN for guide
+```
+Editor: ipincamp
+Tools : Visual Studio Code
+```
 
-[Click me](http://ariflitejek.github.io/maze/)
+## About
+* This project has started in 2020 until now.
+***
+## Content Inside
+1. hello-world (October 2020)
+2. maze (November 2020)
+3. calculator (December 2021)
+4. Soon!
