@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World!</title>
+    <title>Vanilla JavaScript</title>
+    <link rel="stylesheet" href="../public/style/nav.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <h2>Hello World!</h2>
-    <p>Inspect for see code result</p>
-    <script src="./index.js"></script>
+    <!-- Navbar -->
+    <header>
+        <p class="logo">HELLO WORLD</p>
+        <input type="checkbox" class="btn">
+        <div class="nav">
+            <ol>
+                <li><a href="../">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Services</a></li>
+            </ol>
+        </div>
+    </header>
+    <div>
+        <p><br>Inspect and navigate to the console to see the results.</p><br>
+    </div>
+    <div>
+        <!--Block to embed the js content, use <pre> tag-->
+        <p>Code:</p>
+        <pre id="code" style="background-color: #eee; border: 1px solid rgb(120, 120, 120); display: block; padding: 20px;">
+        </pre>
+    </div>
+    <!-- Copyright -->
+    <footer>
+        <small>Copyright &copy; 2022, <a href="https://github.com/CfromD" target="_blank">Crack from
+                Distance</a></small>
+    </footer>
+    <script>
+        $("#code").load("../public/script/helloworld.js");
+    </script>
 </body>
+
 </html>
