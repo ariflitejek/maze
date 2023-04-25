@@ -98,11 +98,11 @@ function animate() {
     i++;
     if (drew.indexOf(current) == -1) {
       drew.push(current);
-      ctx.fillStyle = "#000000";
+      ctx.fillStyle = '#000000';
     } else {
-      ctx.fillStyle = "#DDDDDD";
+      ctx.fillStyle = '#DDDDDD';
       ctx.fillRect(current.x, current.y, floorSize, floorSize);
-      ctx.fillStyle = "#000000";
+      ctx.fillStyle = '#000000';
     }
     if (current.n) ctx.fillRect(current.x, current.y, floorSize, wallSize);
     if (current.s)
@@ -113,4 +113,4 @@ function animate() {
     if (i == cells.length - 1) window.clearInterval(animation);
   }, 1);
 }
-document.getElementById("animate").onclick = animate;
+document.getElementById('animate').onclick = animate;

@@ -8,7 +8,7 @@ var player = {
   velX: 0,
   velY: 0,
 };
-var ctx = document.getElementById("game").getContext("2d");
+var ctx = document.getElementById('game').getContext('2d');
 ctx.canvas.width =
   Math.round((window.innerWidth - floorSize * 2) / floorSize) * floorSize +
   wallSize;

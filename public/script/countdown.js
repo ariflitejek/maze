@@ -1,12 +1,12 @@
-const setTimer = document.querySelector("#input-timer");
-const setButton = document.querySelector("#button-timer");
-const resetButton = document.querySelector("#reset");
+const setTimer = document.querySelector('#input-timer');
+const setButton = document.querySelector('#button-timer');
+const resetButton = document.querySelector('#reset');
 
-resetButton.addEventListener("click", () => {
-    window.location.reload();
-})
+resetButton.addEventListener('click', () => {
+  window.location.reload();
+});
 
-setButton.addEventListener("click", () => {
+setButton.addEventListener('click', () => {
   const inputValue = setTimer.value;
   let countDownDate = new Date(inputValue).getTime();
 
@@ -21,12 +21,12 @@ setButton.addEventListener("click", () => {
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    let timer = document.getElementById("timer");
+    let timer = document.getElementById('timer');
     timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
     if (distance < 0) {
       clearInterval(x);
-      timer.innerHTML = "Time Up!";
+      timer.innerHTML = 'Time Up!';
     }
   }, 1000);
 });

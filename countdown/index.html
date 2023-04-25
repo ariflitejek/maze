@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla JavaScript</title>
-    <link rel="stylesheet" href="../public/style/nav.css">
-    <link rel="stylesheet" href="../public/style/countdown.css">
-</head>
 
-<body>
-    <!-- Navbar -->
-    <header>
-        <p class="logo">COUNTDOWN</p>
-        <input type="checkbox" class="btn">
-        <div class="nav">
-            <ol>
-                <li><a href="../">Home</a></li>
-                <li><a href="mailto:support@nur-arifin.my.id">Contact</a></li>
-                <li><a href="">Services</a></li>
-            </ol>
-        </div>
-    </header>
+    <link rel="stylesheet" href="/public/style/nav.css" />
+    <link rel="stylesheet" href="/public/style/countdown.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav id="ncp">
+      <h1>Countdown</h1>
+      <ul>
+        <li><a draggable="false" href="/">Home</a></li>
+        <li><a draggable="false" href="#">About</a></li>
+        <li>
+          <a
+            draggable="false"
+            href="https://wa.me/6285292806060?text=Hallo%20Admin!%0ASaya%20ingin%20bertanya%20mengenai%20project%20Anda"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
     <div>
-        <p>Contoh: Feb 28, 2022 18:00:00</p><br>
-        <input id="input-timer" value="" placeholder="Feb 24, 2022 18:00:00">
-        <button id="button-timer">SET</button>
-        <button id="reset">RESET</button>
+      <p>Contoh: Feb 28, 2022 18:00:00</p>
+      <br />
+      <input id="input-timer" value="" placeholder="Feb 24, 2022 18:00:00" />
+      <button id="button-timer">SET</button>
+      <button id="reset">RESET</button>
     </div>
     <div id="timer"></div>
     <!-- Copyright -->
     <footer>
-        <small>Copyright &copy; 2022, <a href="https://github.com/AmethystCraft" target="_blank">Amethyst
-                Craft</a></small>
+      <small
+        >Copyright &copy; 2022,
+        <a href="https://github.com/AmethystCraft" target="_blank"
+          >Amethyst Craft</a
+        ></small
+      >
     </footer>
     <script src="../public/script/countdown.js"></script>
-</body>
-
+  </body>
 </html>

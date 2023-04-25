@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla JavaScript Project</title>
-    <link rel="stylesheet" href="./public/style/nav.css">
-</head>
+    <title>Project List | Vanilla JavaScript</title>
 
-<body>
-    <!-- Navbar -->
-    <header>
-        <p class="logo">Vanilla JavaScript</p>
-        <input type="checkbox" class="btn">
-        <div class="nav">
-            <ol>
-                <li><a href="./">Home</a></li>
-                <li><a href="mailto:support@nur-arifin.my.id">Contact</a></li>
-                <li><a href="">Services</a></li>
-            </ol>
-        </div>
-    </header>
-    <div>
-        <br>
-        <h3>Project List</h3>
-        <li><a href="./hello-world/">Hello World</a></li>
-        <li><a href="./calculator/">Calculator</a></li>
-        <li><a href="./maze/">Maze</a></li>
-        <li><a href="./typing-test/">Typing Test</a></li>
-        <li><a href="./countdown/">Countdown</a></li>
+    <link rel="stylesheet" href="/public/style/nav.css" />
+    <link rel="stylesheet" href="/public/style/list.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="ncp">
+      <h1>Vanilla JavaScript</h1>
+      <ul>
+        <li><a draggable="false" href="/">Home</a></li>
+        <li><a draggable="false" href="#">About</a></li>
+        <li>
+          <a
+            draggable="false"
+            href="https://wa.me/6285292806060?text=Hallo%20Admin!%0ASaya%20ingin%20bertanya%20mengenai%20project%20Anda"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- main -->
+    <div id="ncp" class="project-list">
+      <div class="project-item">
+        <h2 class="project-title">
+          <a href="/hello-world/" draggable="false">Hello World</a>
+        </h2>
+        <p>
+          My first hello world program in HTML. This project will be released on
+          October 15, 2020
+        </p>
+      </div>
+      <div class="project-item">
+        <h2 class="project-title">
+          <a href="/maze/" draggable="false">Maze</a>
+        </h2>
+        <p>
+          Maze game is made using canvas. This project will be released on
+          November 8, 2020
+        </p>
+      </div>
+      <div class="project-item">
+        <h2 class="project-title">
+          <a href="/calculator/" draggable="false">Calculator</a>
+        </h2>
+        <p>
+          Simple calculator with JavaScript. This project will be released on
+          December 18, 2021
+        </p>
+      </div>
+      <div class="project-item">
+        <h2 class="project-title">
+          <a href="/typing-test/" draggable="false">Typing Test</a>
+        </h2>
+        <p>
+          Test your typing by utilizing the API. This project will be released
+          on January 22, 2022
+        </p>
+      </div>
+      <div class="project-item">
+        <h2 class="project-title">
+          <a href="/countdown/" draggable="false">Countdown</a>
+        </h2>
+        <p>
+          Value your time before it runs out.. This project will be released on
+          February 24, 2022
+        </p>
+      </div>
     </div>
-    <!-- Copyright -->
-    <footer>
-        <small>Copyright &copy; 2022, <a href="https://github.com/AmethystCraft" target="_blank">Amethyst
-                Craft</a></small>
-    </footer>
-</body>
 
+    <!-- footer -->
+    <footer id="ncp">
+      <span id="year"
+        >Made with ❤️ by
+        <a
+          id="author"
+          draggable="false"
+          href="https://github.com/ipincamp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ipincamp</a
+        >
+        &copy;
+      </span>
+    </footer>
+
+    <!-- copyright -->
+    <script>
+      var footerSpan = document.getElementById('year');
+      var year = new Date().getFullYear();
+      footerSpan.innerHTML += year;
+    </script>
+  </body>
 </html>

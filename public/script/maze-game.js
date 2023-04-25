@@ -15,11 +15,11 @@ function main() {
   document.onkeyup = process_key_up;
   generateMap();
   play();
-  document.getElementById("play").onclick = function () {
+  document.getElementById('play').onclick = function () {
     clear();
     play();
   };
-  document.getElementById("generate").onclick = function () {
+  document.getElementById('generate').onclick = function () {
     clear();
     player.x = 0;
     player.y = 0;
@@ -30,15 +30,15 @@ function main() {
 
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  ctx.fillStyle = "#000000";
+  ctx.fillStyle = '#000000';
   ctx.fillRect(player.x, player.y, player.size, player.size);
   for (var i = 0; i < rows; i++) {
     for (var j = 0; j < cols; j++) {
       if (i == exit[0] && j == exit[1]) {
-        ctx.fillStyle = "#FF0000";
+        ctx.fillStyle = '#FF0000';
         ctx.fillRect(map[i][j].x, map[i][j].y, floorSize, floorSize);
       }
-      ctx.fillStyle = "#000000";
+      ctx.fillStyle = '#000000';
       if (map[i][j].n)
         ctx.fillRect(map[i][j].x, map[i][j].y, floorSize, wallSize);
       if (map[i][j].s)
@@ -53,16 +53,16 @@ function draw() {
 
 function process_key_down(e) {
   e = e || window.event;
-  if (e.keyCode == "87") player.velY = -player.speed;
-  else if (e.keyCode == "83") player.velY = player.speed;
-  else if (e.keyCode == "68") player.velX = player.speed;
-  else if (e.keyCode == "65") player.velX = -player.speed;
+  if (e.keyCode == '87') player.velY = -player.speed;
+  else if (e.keyCode == '83') player.velY = player.speed;
+  else if (e.keyCode == '68') player.velX = player.speed;
+  else if (e.keyCode == '65') player.velX = -player.speed;
 }
 
 function process_key_up(e) {
   e = e || window.event;
-  if (e.keyCode == "87" || e.keyCode == "83") player.velY = 0;
-  else if (e.keyCode == "68" || e.keyCode == "65") player.velX = 0;
+  if (e.keyCode == '87' || e.keyCode == '83') player.velY = 0;
+  else if (e.keyCode == '68' || e.keyCode == '65') player.velX = 0;
 }
 
 function update() {
@@ -127,5 +127,5 @@ function verticalWall(left, right, dir) {
 
 function end() {
   window.clearInterval(game);
-  alert("Congrats");
+  alert('Congrats');
 }

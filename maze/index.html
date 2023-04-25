@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanilla JavaScript</title>
-    <link rel="stylesheet" href="../public/style/maze.css">
-    <link rel="stylesheet" href="../public/style/nav.css">
-</head>
 
-<body onload="main()">
-    <!-- Navbar -->
-    <header>
-        <p class="logo">MAZE</p>
-        <input type="checkbox" class="btn">
-        <div class="nav">
-            <ol>
-                <li><a href="../">Home</a></li>
-                <li><a href="mailto:support@nur-arifin.my.id">Contact</a></li>
-                <li><a href="">Services</a></li>
-            </ol>
-        </div>
-    </header>
-    <canvas id="game" width="800" height="600"></canvas>
+    <link rel="stylesheet" href="../public/style/maze.css" />
+    <link rel="stylesheet" href="../public/style/nav.css" />
+  </head>
+
+  <body onload="main()">
+    <!-- navbar -->
+    <nav id="ncp">
+      <h1>Maze</h1>
+      <ul>
+        <li><a draggable="false" href="/">Home</a></li>
+        <li><a draggable="false" href="#">About</a></li>
+        <li>
+          <a
+            draggable="false"
+            href="https://wa.me/6285292806060?text=Hallo%20Admin!%0ASaya%20ingin%20bertanya%20mengenai%20project%20Anda"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <canvas id="game" width="800" height="350"></canvas>
     <div id="info">
-        <div class="button" id="play">PLAY</div>
-        <div class="button" id="animate">ANIMATE</div>
-        <div class="button" id="generate">GENERATE</div>
+      <div class="button" id="play">PLAY</div>
+      <div class="button" id="animate">ANIMATE</div>
+      <div class="button" id="generate">GENERATE</div>
 
-        <br> W - Move Up.
-        <br> A - Move Left.
-        <br> S - Move Down.
-        <br> D - Move Right. <br> <br>
+      <br />
+      W - Move Up. <br />
+      A - Move Left. <br />
+      S - Move Down. <br />
+      D - Move Right. <br />
+      <br />
     </div>
-    <script src="../public/script/maze-min.js"></script>
-</body>
 
+    <!-- footer -->
+    <footer id="ncp">
+      <span id="year"
+        >Made with ❤️ by
+        <a
+          id="author"
+          draggable="false"
+          href="https://github.com/ipincamp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ipincamp</a
+        >
+        &copy;
+      </span>
+    </footer>
+
+    <!-- copyright -->
+    <script>
+      var footerSpan = document.getElementById('year');
+      var year = new Date().getFullYear();
+      footerSpan.innerHTML += year;
+    </script>
+    <script src="../public/script/maze-min.js"></script>
+  </body>
 </html>

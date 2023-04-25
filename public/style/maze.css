@@ -1,36 +1,31 @@
-body {
-	background: white;
-	margin: 0;
-}
-
 canvas {
-	display: block;
-	margin: 10px auto;
+  display: block;
+  margin: 10px auto;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-	color: red;
+  color: red;
 }
 
 .button {
-	border: 1px solid black;
-	display: inline-block;
-	margin-bottom: 20px;
-	padding: 5px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 .button:hover {
-	border: 1px solid red;
-	color: red;
-	cursor: pointer;
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
 }
 
 #info {
-	color: black;
-	margin: 10px auto;
-	width: 275px;
+  color: black;
+  margin: 10px auto;
+  width: 275px;
 }

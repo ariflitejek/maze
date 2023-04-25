@@ -75,10 +75,10 @@ function animate() {
       (current = l[r]),
         r++,
         -1 == e.indexOf(current)
-          ? (e.push(current), (ctx.fillStyle = "#000000"))
-          : ((ctx.fillStyle = "#DDDDDD"),
+          ? (e.push(current), (ctx.fillStyle = '#000000'))
+          : ((ctx.fillStyle = '#DDDDDD'),
             ctx.fillRect(current.x, current.y, floorSize, floorSize),
-            (ctx.fillStyle = "#000000")),
+            (ctx.fillStyle = '#000000')),
         current.n && ctx.fillRect(current.x, current.y, floorSize, wallSize),
         current.s &&
           ctx.fillRect(current.x, current.y + floorSize, floorSize, wallSize),
@@ -102,24 +102,24 @@ function main() {
     (document.onkeyup = process_key_up),
     generateMap(),
     play(),
-    (document.getElementById("play").onclick = function () {
+    (document.getElementById('play').onclick = function () {
       clear(), play();
     }),
-    (document.getElementById("generate").onclick = function () {
+    (document.getElementById('generate').onclick = function () {
       clear(), (player.x = 0), (player.y = 0), generateMap(), play();
     });
 }
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT),
-    (ctx.fillStyle = "#000000"),
+    (ctx.fillStyle = '#000000'),
     ctx.fillRect(player.x, player.y, player.size, player.size);
   for (var e = 0; rows > e; e++)
     for (var l = 0; cols > l; l++)
       e == exit[0] &&
         l == exit[1] &&
-        ((ctx.fillStyle = "#FF0000"),
+        ((ctx.fillStyle = '#FF0000'),
         ctx.fillRect(map[e][l].x, map[e][l].y, floorSize, floorSize)),
-        (ctx.fillStyle = "#000000"),
+        (ctx.fillStyle = '#000000'),
         map[e][l].n &&
           ctx.fillRect(map[e][l].x, map[e][l].y, floorSize, wallSize),
         map[e][l].s &&
@@ -141,19 +141,19 @@ function draw() {
 }
 function process_key_down(e) {
   (e = e || window.event),
-    "87" == e.keyCode
+    '87' == e.keyCode
       ? (player.velY = -player.speed)
-      : "83" == e.keyCode
+      : '83' == e.keyCode
       ? (player.velY = player.speed)
-      : "68" == e.keyCode
+      : '68' == e.keyCode
       ? (player.velX = player.speed)
-      : "65" == e.keyCode && (player.velX = -player.speed);
+      : '65' == e.keyCode && (player.velX = -player.speed);
 }
 function process_key_up(e) {
   (e = e || window.event),
-    "87" == e.keyCode || "83" == e.keyCode
+    '87' == e.keyCode || '83' == e.keyCode
       ? (player.velY = 0)
-      : ("68" == e.keyCode || "65" == e.keyCode) && (player.velX = 0);
+      : ('68' == e.keyCode || '65' == e.keyCode) && (player.velX = 0);
 }
 function update() {
   if (0 == player.velX || 0 == player.velY) {
@@ -207,12 +207,12 @@ function verticalWall(e, l, r) {
   );
 }
 function end() {
-  window.clearInterval(game), alert("Congrats");
+  window.clearInterval(game), alert('Congrats');
 }
 var floorSize = 10,
   wallSize = 1,
   player = { size: floorSize - 1, speed: 5, x: 0, y: 0, velX: 0, velY: 0 },
-  ctx = document.getElementById("game").getContext("2d");
+  ctx = document.getElementById('game').getContext('2d');
 ctx.canvas.width =
   Math.round((window.innerWidth - 2 * floorSize) / floorSize) * floorSize +
   wallSize;
@@ -224,4 +224,4 @@ var WIDTH = ctx.canvas.width - wallSize,
   exit = null,
   game = null,
   animation = null;
-document.getElementById("animate").onclick = animate;
+document.getElementById('animate').onclick = animate;

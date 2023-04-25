@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vanilla JavaScript</title>
-  <link rel="stylesheet" href="../public/style/nav.css">
-  <link rel="stylesheet" href="../public/style/calculator.css">
-  <script src="../public/script/calculator.js" defer></script>
-</head>
-<body>
-  <!-- Navbar -->
-  <header>
-    <p class="logo">CALCULATOR</p>
-    <input type="checkbox" class="btn">
-    <div class="nav">
-        <ol>
-            <li><a href="../">Home</a></li>
-            <li><a href="mailto:support@nur-arifin.my.id">Contact</a></li>
-            <li><a href="">Services</a></li>
-        </ol>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Vanilla JavaScript</title>
+
+    <link rel="stylesheet" href="/public/style/nav.css" />
+    <link rel="stylesheet" href="/public/style/calculator.css" />
+    <script src="/public/script/calculator.js" defer></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav id="ncp">
+      <h1>Calculator</h1>
+      <ul>
+        <li><a draggable="false" href="/">Home</a></li>
+        <li><a draggable="false" href="#">About</a></li>
+        <li>
+          <a
+            draggable="false"
+            href="https://wa.me/6285292806060?text=Hallo%20Admin!%0ASaya%20ingin%20bertanya%20mengenai%20project%20Anda"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete class="delete">DEL</button>
+      <button data-operation>÷</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals class="span-two result">=</button>
     </div>
-</header>
-  <div class="calculator-grid">
-    <div class="output">
-      <div data-previous-operand class="previous-operand"></div>
-      <div data-current-operand class="current-operand"></div>
-    </div>
-    <button data-all-clear class="span-two">AC</button>
-    <button data-delete class="delete">DEL</button>
-    <button data-operation>÷</button>
-    <button data-number>1</button>
-    <button data-number>2</button>
-    <button data-number>3</button>
-    <button data-operation>*</button>
-    <button data-number>4</button>
-    <button data-number>5</button>
-    <button data-number>6</button>
-    <button data-operation>+</button>
-    <button data-number>7</button>
-    <button data-number>8</button>
-    <button data-number>9</button>
-    <button data-operation>-</button>
-    <button data-number>.</button>
-    <button data-number>0</button>
-    <button data-equals class="span-two result">=</button>
-  </div>
-</body>
+
+    <!-- footer -->
+    <footer id="ncp">
+      <span id="year"
+        >Made with ❤️ by
+        <a
+          id="author"
+          draggable="false"
+          href="https://github.com/ipincamp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ipincamp</a
+        >
+        &copy;
+      </span>
+    </footer>
+
+    <!-- copyright -->
+    <script>
+      var footerSpan = document.getElementById('year');
+      var year = new Date().getFullYear();
+      footerSpan.innerHTML += year;
+    </script>
+  </body>
 </html>
