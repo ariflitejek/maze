@@ -36,15 +36,28 @@
       <button id="reset">RESET</button>
     </div>
     <div id="timer"></div>
-    <!-- Copyright -->
-    <footer>
-      <small
-        >Copyright &copy; 2022,
-        <a href="https://github.com/AmethystCraft" target="_blank"
-          >Amethyst Craft</a
-        ></small
-      >
+    <!-- footer -->
+    <footer id="ncp">
+      <span id="year"
+        >Made with ❤️ by
+        <a
+          id="author"
+          draggable="false"
+          href="https://github.com/ipincamp"
+          target="_blank"
+          rel="noopener noreferrer"
+          >ipincamp</a
+        >
+        &copy;
+      </span>
     </footer>
+
+    <!-- copyright -->
+    <script>
+      var footerSpan = document.getElementById('year');
+      var year = new Date().getFullYear();
+      footerSpan.innerHTML += year;
+    </script>
     <script src="../public/script/countdown.js"></script>
   </body>
 </html>
